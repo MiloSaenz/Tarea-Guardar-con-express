@@ -10,5 +10,6 @@ app.set('views', path.join(__dirname,'/src/views'));
 const mainRouter = require('./src/routes/main.routes');
 app.use(mainRouter);
 app.use('/productos', require('./src/routes/productos.router'));
+app.use('/categorias', require('./src/routes/categorias.router'));
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
