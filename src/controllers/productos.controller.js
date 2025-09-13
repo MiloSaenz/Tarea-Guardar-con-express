@@ -1,14 +1,14 @@
-const querystring=require('querystring');
-const index=(req,res)=>{
-    const query=querystring.stringify(req.query);
+const querystring = require('querystring');
+const index = (req, res) => {
+    const query = querystring.stringify(req.query);
 
-    fetch('https://fakestoreapi.com/products?'+query)
+    fetch('https://fakestoreapi.com/products?' + query)
         .then(response => response.json())
-        .then(productos=>{
-             response.render('productos',{productos});
+        .then(productos => {
+            res.render('productos', { productos }); // Use 'res' instead of 'response'
         });
 }
 
-module.exports ={
+module.exports = {
     index
 }

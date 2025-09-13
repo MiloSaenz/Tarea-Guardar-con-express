@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Inventario</h1>
+    <a href="/inventario/create">Crear nuevo item</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% inventario.forEach(item => { %>
+                <tr>
+                    <td><%= item.id %></td>
+                    <td><a href="/inventario/<%= item.id %>"><%= item.descripcion %></a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

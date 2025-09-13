@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Categorías</h1>
+    <a href="/categorias3/create">Crear categoría</a>
+    <ul>
+        <% categorias.forEach(categoria => { %>
+            <li>
+                <a href="/categorias3/<%= categoria.id %>"><%= categoria.nombre %></a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
